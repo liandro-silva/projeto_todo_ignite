@@ -5,8 +5,4 @@ export const font = {
         small: 12,
     },
     fontFamily: 'Inter',
-    weights: {
-        regular: "400",
-        bold: "700"
-    }
 }
