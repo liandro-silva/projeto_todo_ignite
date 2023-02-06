@@ -5,10 +5,9 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'row',
-        paddingBottom: 25,
-        marginBottom: 20,
+        paddingBottom: 15,
         borderBottomWidth: 1.5,
-        borderBottomColor: colors.base.gray[400]
+        borderBottomColor: colors.base.gray[500]
     },
     analyticsTitleContainer: {
         alignItems: 'center',
