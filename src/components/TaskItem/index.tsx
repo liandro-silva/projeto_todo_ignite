@@ -7,6 +7,9 @@ import { Tasks } from '../../interfaces';
 import { TaskItemAnalytics } from './components/TaskItemAnalytics';
 import { TaskItemBox } from './components/TaskItemBox';
 
+import Icon from '@expo/vector-icons/Feather';
+
+
 export type TaskItemProps = {
     tasks: Tasks[],
     onRemoveTask: (id: string) => void,
@@ -36,7 +39,11 @@ export const TaskItem: React.FC<TaskItemProps> = ({ tasks, onRemoveTask, onUpdat
                 height: '90%',
             }}
             ListEmptyComponent={() => (
-                <Text style={{ color: 'red'}}>Vazio</Text>
+                <View style={styles.noTasksContainer}>
+                    <Icon name='clipboard' size={56} color={colors.base.gray[300]}/>
+                    <Text style={styles.noTasksTitle}>Você ainda não tem tarefas cadastradas</Text>
+                    <Text style={styles.noTasksSubtitle}>Crie tarefas e organize seus itens a fazer</Text>
+                </View>
             )}
             renderItem={({ item }) => (
                 <TaskItemBox 
